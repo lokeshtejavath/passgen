@@ -6,22 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" /> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
         <link href="style/styles.css" rel="stylesheet" />
+
    
     </head>
     <body>
-        <h1 id="password"></h1>
+        <div>
+            
+            <span id="password" style="font-size: 3em;">Get Your Password Here</span>
+            <span id="clip">
+                <button id="clip" onclick="copytoclipboard()"  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                    </svg>
+                </button>
+            </span>
+
+        </div>
         <br>
-        <input type="checkbox" id="uppercase" name="uppercase" value="uppercase">
+        <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked="true">
         <label for="uppercase">Include Uppercase letters: [A-Z]</label>
         <br>
         <input type="checkbox" id="symbols" name="symbols" value="symbols">
         <label for="symbols">Include symbols: ['!','@','$',',',',. etc]</label>
         <br>
-        <input type="checkbox" id="numbers" name="numbers" value="number">
+        <input type="checkbox" id="numbers" name="numbers" value="number" checked="true">
         <label for="number">Include Number: [0-9]</label>
         <br>
+        <input type="checkbox" id="start_small" name="start_small" value="start_small">
+        <label for="start_small">Start password with Small Alphabet</label>
+        <br>
+        <input type="checkbox" id="end_small" name="end_small" value="end_small">
+        <label for="end_small">End password with Small Alphabet</label>
+        <br>
+        <input type="number" id="leng" name="leng" value="12">
+        <label for="length">password length</label>
+        <br>
+        <input type="button" id="generate" name="generate" value="generate">
         <footer>
             <script src="scripts/src.js"></script>
         </footer>
