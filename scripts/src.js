@@ -70,16 +70,15 @@ function animate() {
     passgen();
     document.getElementById("clip").style.visibility = "visible";
 };
+
 function copytoclipboard() {
     let text = document.getElementById("password");
-    
     const cb = navigator.clipboard;
     cb.writeText(text.innerText);
-
+    alert("Password copied to clipboard");
+    
 }
+
 
 let but = document.getElementById("generate");
 but.addEventListener("click", animate);
-
-
- 
