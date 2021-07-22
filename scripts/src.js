@@ -6,7 +6,7 @@ async function typer(pass) {
     document.getElementById("password").innerHTML = "";
     
     
-    for (let i = 0; i < pass.length; i++){
+    for (let i = 0; i < pass.length&&document.getElementById("password").innerHTML.length<=pass.length; i++){
         let audio = new Audio("audio/typing.mp3");
         audio.play();
         document.getElementById("password").innerHTML += pass.charAt(i);
@@ -24,6 +24,10 @@ function passgen() {
         len = 25;
         document.getElementById("leng").value = 25;
     }
+    if (len < 8) {
+        len = 8;
+        document.getElementById("leng").value = 8;
+    }
     let pass = "";
     let smaller = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     let upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -33,9 +37,8 @@ function passgen() {
     let up = document.getElementById("uppercase").checked;
     let symbol = document.getElementById("symbols").checked;
     let num = document.getElementById("numbers").checked;
-    console.log(up);
-    console.log(symbol);
-    console.log(num);
+    let start = document.getElementById("start_small").checked;
+    let end= document.getElementById("end_small").checked;
     if (up)
         passarry = passarry.concat(upper);
     if (symbol)
@@ -47,10 +50,15 @@ function passgen() {
     let dummyarray = new Uint32Array(len);
     window.crypto.getRandomValues(array);
     window.crypto.getRandomValues(dummyarray);
-    console.log("hello");
-    console.log(len);
-    for (let i = 0; i < array.length; i++){
-
+    for (let i = 0; i < array.length; i++) {
+        if (i == 0 && start) {
+            pass += smaller[array[i] % smaller.length];
+            continue;
+        }
+        if (i == array.length - 1 && end) {
+            pass += smaller[array[i] % smaller.length];
+            continue;
+        }
         let index = array[i] % passarry.length;
         let seed = Math.random() * array.length;
         if (maparr[index] > 2) {
@@ -63,9 +71,9 @@ function passgen() {
             console.log(seed);
         }
         pass += passarry[index];
+
         
     }
-    console.log("hello");
     typer(pass);
     
 

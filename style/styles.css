@@ -1,11 +1,13 @@
 
 body{
-    background-image: url("../image/background.jpg");
+    background-image: url("../image/background.jpg") ;
+    
     background-repeat: no-repeat;
-    background-size: cover;
+    
+    
     padding-left: 20%;
     font-family: 'Courier Prime',monospace;
-    padding-top: 10%;
+    padding-top: 7%;
     color: rgb(43, 248, 70);
     line-height: 200%;
     font-size: 1.5em;
@@ -21,8 +23,14 @@ span#password {
 
 span#clip {
     visibility: hidden;
+    background:rgb(43, 248, 70);
+    
 }
-
+button#clip{
+    background-color: rgb(43, 248, 70);
+    border: none;
+    border-radius: 10px;
+}
 input#leng {
     background: rgb(43, 248, 70);
     border: none;
