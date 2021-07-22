@@ -20,7 +20,11 @@ async function typer(pass) {
 function passgen() {
     document.getElementById("clip").style.visibility = "hidden";
     let len = document.getElementById("leng").value;
-    let pass = ""
+    if (len > 25) {
+        len = 25;
+        document.getElementById("leng").value = 25;
+    }
+    let pass = "";
     let smaller = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j','k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     let upper = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
     let symbols = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '[', '}', ']', '|', ';', ':', '.', '?'];
