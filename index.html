@@ -17,7 +17,7 @@
     <body> 
         <div>
             
-            <span id="password" style="font-size: 3em;">Get Your Password Here</span>
+            <span id="password" >Get Your Password Here</span>
             <span id="clip">
                 <button id="clip" onclick="copytoclipboard()"  >
                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
@@ -29,19 +29,19 @@
 
         </div>
         <br>
-        <input type="checkbox" id="uppercase" name="uppercase" value="uppercase" checked="true">
+        <input type="checkbox" id="uppercase" class="check" value="uppercase" checked="true">
         <label for="uppercase">Include Uppercase letters: [A-Z]</label>
         <br>
-        <input type="checkbox" id="symbols" name="symbols" value="symbols">
+        <input type="checkbox" id="symbols" class="check" value="symbols">
         <label for="symbols">Include symbols: ['!','@','$',',',',. etc]</label>
         <br>
-        <input type="checkbox" id="numbers" name="numbers" value="number" checked="true">
+        <input type="checkbox" id="numbers" class="check" value="number" checked="true">
         <label for="number">Include Number: [0-9]</label>
         <br>
-        <input type="checkbox" id="start_small" name="start_small" value="start_small">
+        <input type="checkbox" id="start_small" class="check" value="start_small">
         <label for="start_small">Start password with Small Alphabet</label>
         <br>
-        <input type="checkbox" id="end_small" name="end_small" value="end_small">
+        <input type="checkbox" id="end_small" class="check" value="end_small">
         <label for="end_small">End password with Small Alphabet</label>
         <br>
         <input type="number" id="leng" name="leng" value="12">
@@ -52,7 +52,6 @@
         <span id="disclaimer">Minimum allowed till 8 Characters, small inputs will clip to 8</span>
         <br>
         <input type="button" id="generate" name="generate" value="generate" class="button">
-       
         <footer>
             <script src="scripts/src.js"></script>
         </footer>

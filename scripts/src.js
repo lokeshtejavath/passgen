@@ -5,7 +5,7 @@ function sleep(ms) {
 async function typer(pass) {
     document.getElementById("password").innerHTML = "";
     
-    
+    document.getElementById("generate").disabled = true;
     for (let i = 0; i < pass.length&&document.getElementById("password").innerHTML.length<=pass.length; i++){
         let audio = new Audio("audio/typing.mp3");
         audio.play();
@@ -15,7 +15,7 @@ async function typer(pass) {
         audio.pause();
         delete audio;
     }
-    
+    document.getElementById("generate").disabled = false;  
 }
 function passgen() {
     document.getElementById("clip").style.visibility = "hidden";
@@ -90,7 +90,6 @@ function copytoclipboard() {
     alert("Password copied to clipboard");
     
 }
-
 
 let but = document.getElementById("generate");
 but.addEventListener("click", animate);
