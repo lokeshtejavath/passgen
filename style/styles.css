@@ -1,55 +1,62 @@
+body {
+    background-image: url("../image/background.jpg");
 
-body{
-    background-image: url("../image/background.jpg") ;
-    
     background-repeat: no-repeat;
-    
-    
+    background-size: cover 100%;
+    background-position: center;
+
     padding-left: 20%;
-    font-family: 'Courier Prime',monospace;
+    font-family: 'IBM Plex Mono', monospace;
     padding-top: 7%;
     color: rgb(43, 248, 70);
     line-height: 200%;
     font-size: 1.5em;
 }
+
 button#generate {
     border: none;
     border-bottom: 3px rgb(43, 248, 70);
 }
+
 span#password {
     font-size: large;
     font-size: 3em;
-    
+
 }
 
 span#clip {
     visibility: hidden;
-    background:rgb(43, 248, 70);
-    
+    background: rgb(43, 248, 70);
+
 }
-button#clip{
+
+button#clip {
     background-color: rgb(43, 248, 70);
     border: none;
     border-radius: 10px;
 }
+
 input#leng {
     background: rgb(43, 248, 70);
     border: none;
     border-bottom: 3px rgb(43, 248, 70);
     font-size: large;
 }
-.button{
+
+.button {
     background-color: rgb(43, 248, 70);
     font-size: large;
     border-radius: 16px;
-    
+
 }
-#disclaimer{
+
+#disclaimer {
     font-size: medium;
 }
-input.check{
+
+input.check {
     width: 1.5em;
-    
+
     height: 1.5em;
     border-radius: 0.45em;
     color: rgb(43, 248, 70);

@@ -4,7 +4,7 @@ function sleep(ms) {
 
 async function typer(pass) {
     document.getElementById("password").innerHTML = "";
-    
+    document.getElementById("password").style = "font-family: 'Courier Prime',monospace;";
     document.getElementById("generate").disabled = true;
     for (let i = 0; i < pass.length&&document.getElementById("password").innerHTML.length<=pass.length; i++){
         let audio = new Audio("audio/typing.mp3");
@@ -12,7 +12,7 @@ async function typer(pass) {
         document.getElementById("password").innerHTML += pass.charAt(i);
         await sleep(100);
         console.log(document.getElementById("password").value);
-        audio.pause();
+        audio.stop;
         delete audio;
     }
     document.getElementById("generate").disabled = false;  
